@@ -1,2 +1,2 @@
 # wxccscriptparams
-user script automation  to copy past call control script params
+user script automation  to copy paste call control script params
