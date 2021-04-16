@@ -101,26 +101,35 @@
     function replaceSelectValue(i, paramValue){
         console.log("---AY---: i am replaceSelectValue function");
 
-        var newSelectFieldOuterHtml =`<div class="col-sm-4"><select id="controlScriptParam_${i}" class="form-control select2-hidden-accessible" tabindex="-1" aria-hidden="true">
-		<option/>
-		<option value="${paramValue}" select="selected">${paramValue}</option>
-	</select>
-	<span class="select2 select2-container select2-container--default select2-container--below" dir="ltr" style="width: 100px;">
-		<span class="selection">
-			<span class="select2-selection select2-selection--single" role="combobox" aria-haspopup="true" aria-expanded="false" tabindex="0" aria-labelledby="select2-controlScriptParam_${i}-container">
-				<span class="select2-selection__rendered" id="select2-controlScriptParam_${i}-container" data-original-title="" title="${paramValue}">
-					<span class="select2-selection__clear">×</span>
-					${paramValue}</span>
-				<span class="select2-selection__arrow" role="presentation">
-					<b role="presentation"/>
-				</span>
-			</span>
-		</span>
-		<span class="dropdown-wrapper" aria-hidden="true"/>
-	</span>
-	<label id="controlScriptParam_${i}-error" class="error hide">This field is required</label>
-</div>`
-
+        var newSelectFieldOuterHtml = `<div class="col-sm-4">
+        <select id="controlScriptParam_${i}" class="form-control select2-hidden-accessible" tabindex="-1" aria-hidden="true">
+            <option/>              
+            <option value="${paramValue}" selected="selected">${paramValue}</option>
+        </select>
+        <span class="select2 select2-container select2-container--default" dir="ltr" style="width: 100px;">
+            <span class="selection">
+                <span class="select2-selection select2-selection--single" role="combobox" aria-haspopup="true" aria-expanded="false" tabindex="0" aria-labelledby="select2-controlScriptParam_${i}-container">
+                    <span class="select2-selection__rendered" id="select2-controlScriptParam_${i}-container" title="" data-original-title="${paramValue}">
+                        <span class="select2-selection__clear">×</span>${paramValue}</span>
+                                
+                    <span class="select2-selection__arrow" role="presentation">
+                        <b role="presentation"/>
+             
+                    </span>
+                               
+            
+                </span>
+                              
+           
+            </span>
+                             
+            <span class="dropdown-wrapper" aria-hidden="true"/>
+              
+                                                                                          
+          
+        </span>
+        <label id="controlScriptParam_${i}-error" class="error hide">This field is required</label>
+    </div>`
 
 		var scriptParams = document.getElementById("controlScriptParamsDiv").getElementsByClassName("form-group");
 
