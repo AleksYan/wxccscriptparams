@@ -57,6 +57,7 @@
         }
         console.log('----AY----: Successfully fetched script parameters!');
         console.log(scriptParamsObj);
+	navigator.clipboard.writeText(JSON.stringify(scriptParamsObj));
     }
 
 
